@@ -1,0 +1,149 @@
+/* تحسين الشكل العام */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f6f7; /* خلفية فاتحة */
+    color: #34495e; /* لون النص الأساسي */
+    margin: 0;
+    padding: 0;
+}
+
+/* الهيدر */
+header {
+    background-color: #2c3e50; /* لون خلفية داكن */
+    color: white; /* لون النص */
+    padding: 20px;
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px; /* مسافة بين الهيدر والمحتوى */
+}
+
+/* تحسين محتوى الصفحة */
+.content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* قائمة المهام */
+ul {
+    list-style-type: none; /* إزالة النقاط */
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    background-color: #ecf0f1; /* خلفية فاتحة */
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 8px; /* حواف مستديرة */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* إضافة ظل */
+    transition: background-color 0.3s ease;
+}
+
+li:hover {
+    background-color: #bdc3c7; /* تغيير اللون عند المرور */
+}
+
+li strong {
+    font-size: 1.3rem;
+    color: #34495e;
+}
+
+li div {
+    margin-top: 10px;
+}
+
+li a {
+    text-decoration: none;
+    color: #3498db;
+    font-weight: bold;
+    margin-right: 15px;
+}
+
+li a:hover {
+    color: #2980b9; /* تغيير اللون عند المرور */
+}
+
+/* تنسيق الأزرار مع الأيقونات */
+.task-actions {
+    display: flex;
+    gap: 15px;  /* المسافة بين الأزرار */
+    align-items: center;
+    justify-content: flex-end;  /* محاذاة الأزرار إلى اليمين */
+}
+
+.task-btn {
+    display: flex;
+    align-items: center;
+    padding: 8px 12px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.task-btn .material-icons {
+    margin-right: 5px;  /* المسافة بين الأيقونة والنص */
+}
+
+.task-btn:hover {
+    background-color: #0056b3;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  /* إضافة تأثير ظل عند التمرير */
+}
+
+/* تنسيق الأزرار (غير الأيقونات) */
+button {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    margin: 5px;
+}
+
+button:hover {
+    background-color: #2980b9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  /* إضافة تأثير ظل عند التمرير */
+}
+
+/* تنسيق الفوتر */
+footer {
+    background-color: #34495e;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 14px;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* تحسين الصفحة لتكون متجاوبة */
+@media (max-width: 768px) {
+    header {
+        font-size: 28px;
+        padding: 15px;
+    }
+
+    li {
+        padding: 15px;
+    }
+
+    button {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+    .task-actions {
+        flex-direction: column; /* جعل الأزرار في العمود عند الشاشات الصغيرة */
+        gap: 10px;
+    }
+}

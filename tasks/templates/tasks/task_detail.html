@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{{ task.name }}</h1>
+    <p><strong>Priority:</strong> {{ task.priority }}</p>
+    <p><strong>Description:</strong> {{ task.description }}</p>  <!-- لو كان في حقل وصف في النموذج -->
+    <a href="{% url 'task_update' task.id %}">Edit</a> |
+    <a href="{% url 'task_delete' task.id %}">Delete</a> |
+    <a href="{% url 'task_list' %}">Back to Task List</a>
+{% endblock %}
